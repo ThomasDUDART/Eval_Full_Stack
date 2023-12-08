@@ -1,0 +1,9 @@
+<form #addRestauForm="ngForm" (ngSubmit)="submit(addRestauForm)">
+  <div>
+    <input #nom="ngModel" type="text" name="nom" [(ngModel)]="formData.nom" [maxlength]="15" [required]="true"/>
+    <span *ngIf="nom.dirty && nom.errors?.['required']" appErrorDirective>Le nom ne peut pas être nul</span>
+  </div>
+  <div>
+    <button type="submit">Submit</button>
+  </div>
+</form>

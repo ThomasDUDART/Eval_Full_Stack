@@ -1,0 +1,20 @@
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Nom</th>
+  </tr>
+  <tr *ngFor="let restau of restaurant">
+    <td>
+      {{restau.id}}
+    </td>
+    <td>
+      {{restau.nom}}
+    </td>
+    <td>
+      <button [routerLink]="'Eval'">eval</button>
+    </td>
+    <td>
+      <img ngSrc="{{restau.coverUrl}}" alt="yes" width="100" height="100">
+    </td>
+  </tr>
+</table>
